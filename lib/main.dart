@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_messenger/features/welcome/pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,16 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Messenger',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Whatsapp'),
-    ),
-        body: Text("Welcome to whatsapp, please sign in to continue"),
-    )
+      theme: ThemeData.dark(),
+      home: const WelcomePage(),
     );
   }
 }
