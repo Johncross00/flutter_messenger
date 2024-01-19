@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_messenger/common/utils/coloors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final double? buttonWidth;
@@ -15,11 +14,7 @@ class CustomElevatedButton extends StatelessWidget {
       height: 42,
       width: buttonWidth ?? MediaQuery.of(context).size.width - 100,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Coloors.greenDark,
-          foregroundColor: Coloors.backgroundDark,
-          splashFactory: NoSplash.splashFactory,
-        ),
+        style: ElevatedButton.styleFrom(),
         onPressed: onPressed,
         child: Text(text),
       ),
