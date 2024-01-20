@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_messenger/common/utils/coloors.dart';
 
+import '../extension/custom_theme_extension.dart';
+
 ThemeData lightTheme(){
   final ThemeData base = ThemeData.light();
   return base.copyWith(elevatedButtonTheme: ElevatedButtonThemeData(
@@ -13,6 +15,9 @@ ThemeData lightTheme(){
     ),
   ),
     scaffoldBackgroundColor: Coloors.backgroundLight,
+    extensions: [
+      CustomThemeExtension.lightMode
+    ],
     colorScheme: base.colorScheme.copyWith(
       background: Coloors.backgroundLight,
     ),

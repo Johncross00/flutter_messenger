@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_messenger/common/extension/custom_theme_extension.dart';
 import 'package:flutter_messenger/common/utils/coloors.dart';
 
 ThemeData darkTheme(){
@@ -13,6 +14,9 @@ ThemeData darkTheme(){
     ),
   ),
     scaffoldBackgroundColor: Coloors.backgroundDark,
+    extensions: [
+      CustomThemeExtension.darkMode
+    ],
     colorScheme: base.colorScheme.copyWith(
       background: Coloors.backgroundDark,
     ),
