@@ -7,13 +7,29 @@ class LanguageButton extends StatelessWidget {
     super.key,
   });
 
+  showBottomSheet(context) {
+    return showModalBottomSheet(
+        context: context,
+        builder: (context){
+          return Container(
+            child: const Center(
+              child: Text('Contenu de la feuille inférieure'),
+            ),
+            height: 400,
+            // color: Colors.red,
+          );
+        }
+        );
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
       color: context.theme.langBtnBgColor,
       borderRadius: BorderRadius.circular(20),
       child: InkWell(
-        onTap: () {},
+        onTap: () => showBottomSheet(context),
         borderRadius: BorderRadius.circular(20),
         splashFactory: NoSplash.splashFactory,
         highlightColor: context.theme.langBtnHighlightColor,

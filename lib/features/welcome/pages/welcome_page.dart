@@ -4,7 +4,6 @@ import 'package:flutter_messenger/common/widgets/custom_elevated_button.dart';
 import 'package:flutter_messenger/features/widgets/language_button.dart';
 import 'package:flutter_messenger/features/widgets/privacy_and_terms.dart';
 
-import '../../../common/utils/coloors.dart';
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 

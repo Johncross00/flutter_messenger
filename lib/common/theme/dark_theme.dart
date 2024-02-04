@@ -20,5 +20,10 @@ ThemeData darkTheme(){
     colorScheme: base.colorScheme.copyWith(
       background: Coloors.backgroundDark,
     ),
+    bottomSheetTheme: BottomSheetThemeData(
+      backgroundColor: Coloors.greyBackground,
+      modalBackgroundColor: Colors.red,
+      modalBarrierColor: Colors.transparent.withOpacity(0.3)
+    )
   );
 }
