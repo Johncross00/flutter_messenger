@@ -38,8 +38,24 @@ class LanguageButton extends StatelessWidget {
                         icon: Icon(Icons.close_outlined),
                     ),
                     SizedBox(width: 10,),
-                    Text('App Language')
+                    Text('App Language',
+                      style: TextStyle(fontSize: 20,
+                      fontWeight: FontWeight.w500,),)
                   ],
+                ),
+                const SizedBox(height: 10,),
+                Divider(color: context.theme.greyColor!.withOpacity(0.3),
+                  thickness: .5,
+                ),
+                RadioListTile(
+                    value: true,
+                    groupValue: true,
+                    onChanged: (value) {},
+                  activeColor: Coloors.greenDark,
+                  title: const Text('English'),
+                  subtitle: Text("(phone's language)",
+                    style: TextStyle(color: context.theme.greyColor),
+                  ),
                 )
               ],
             ),
