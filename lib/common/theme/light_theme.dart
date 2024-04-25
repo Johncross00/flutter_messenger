@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_messenger/common/utils/coloors.dart';
 
 import '../extension/custom_theme_extension.dart';
@@ -18,7 +19,14 @@ ThemeData lightTheme(){
     extensions: [
       CustomThemeExtension.lightMode
     ],
-    colorScheme: base.colorScheme.copyWith(
+      appBarTheme: const AppBarTheme(systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      )
+      ),
+
+
+      colorScheme: base.colorScheme.copyWith(
       background: Coloors.backgroundLight,
     ),
       bottomSheetTheme: BottomSheetThemeData(
