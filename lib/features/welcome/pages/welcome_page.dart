@@ -30,7 +30,7 @@ class WelcomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Text(
-                  "Welcome to Whatsapp",
+                  "Welcome to WhatsApp",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                 ),
                 const PrivacyAndTerms(),

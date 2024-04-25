@@ -11,12 +11,38 @@ class LanguageButton extends StatelessWidget {
     return showModalBottomSheet(
         context: context,
         builder: (context){
-          return Container(
-            child: const Center(
-              child: Text('Contenu de la feuille inférieure'),
+          return Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 10,
             ),
-            height: 400,
-            // color: Colors.red,
+            child: Column(
+              children: [
+                Container(
+                  height: 4,
+                  width: 30,
+                  decoration: BoxDecoration(
+                    color: context.theme.greyColor,
+                    borderRadius: BorderRadius.circular(5)
+                  ),
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: (){},
+                      splashColor: Colors.red,
+                      splashRadius: 22,
+                      iconSize: 22,
+                      padding: EdgeInsets.zero,
+                      constraints: BoxConstraints(minWidth: 40),
+                        icon: Icon(Icons.close_outlined),
+                    ),
+                    SizedBox(width: 10,),
+                    Text('App Language')
+                  ],
+                )
+              ],
+            ),
           );
         }
         );

@@ -21,5 +21,15 @@ ThemeData lightTheme(){
     colorScheme: base.colorScheme.copyWith(
       background: Coloors.backgroundLight,
     ),
+      bottomSheetTheme: BottomSheetThemeData(
+          backgroundColor: Coloors.backgroundLight,
+          modalBackgroundColor: Coloors.backgroundLight,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+                top: Radius.circular(40)
+            ),
+          ),
+          modalBarrierColor: Colors.transparent.withOpacity(0.3)
+      )
   );
 }

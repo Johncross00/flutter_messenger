@@ -6,8 +6,8 @@ ThemeData darkTheme(){
   final ThemeData base = ThemeData.dark();
   return base.copyWith(elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: Coloors.greenLight,
-      foregroundColor: Coloors.backgroundLight,
+      backgroundColor: Coloors.greenDark,
+      foregroundColor: Coloors.backgroundDark,
       elevation: 0,
       shadowColor: Colors.transparent,
       splashFactory: NoSplash.splashFactory,
@@ -22,7 +22,11 @@ ThemeData darkTheme(){
     ),
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: Coloors.greyBackground,
-      modalBackgroundColor: Colors.red,
+      modalBackgroundColor: Coloors.greyBackground,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+            top: Radius.circular(40)),
+      ),
       modalBarrierColor: Colors.transparent.withOpacity(0.3)
     )
   );
