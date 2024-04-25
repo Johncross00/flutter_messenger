@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_messenger/common/extension/custom_theme_extension.dart';
 import 'package:flutter_messenger/common/utils/coloors.dart';
+import 'package:flutter_messenger/common/widgets/custom_elevated_button.dart';
 import 'package:flutter_messenger/features/auth/widgets/custom_text_field.dart';
 
 class LoginPage extends StatefulWidget {
@@ -101,8 +102,19 @@ class _LoginPageState extends State<LoginPage> {
                 keyboardType: TextInputType.number,
               ))
             ],),
-          )
+          ),
+          const SizedBox(height: 20,),
+          Text('Carrier charges may apply', style: TextStyle(
+            color: context.theme.greyColor
+          ),)
         ],
+      ),
+      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: CustomElevatedButton(
+          onPressed: (){},
+          text: 'NEXT',
+        buttonWidth: 90,
       ),
     );
   }
