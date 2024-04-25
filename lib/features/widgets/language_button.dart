@@ -16,6 +16,7 @@ class LanguageButton extends StatelessWidget {
               vertical: 10,
             ),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   height: 4,
@@ -29,7 +30,7 @@ class LanguageButton extends StatelessWidget {
                 Row(
                   children: [
                     IconButton(
-                      onPressed: (){},
+                      onPressed: () => Navigator.of(context).pop(),
                       splashColor: Colors.red,
                       splashRadius: 22,
                       iconSize: 22,
@@ -56,7 +57,16 @@ class LanguageButton extends StatelessWidget {
                   subtitle: Text("(phone's language)",
                     style: TextStyle(color: context.theme.greyColor),
                   ),
-                )
+                ), RadioListTile(
+                    value: true,
+                    groupValue: false,
+                    onChanged: (value) {},
+                  activeColor: Coloors.greenDark,
+                  title: const Text('French'),
+                  subtitle: Text('Français',
+                    style: TextStyle(color: context.theme.greyColor),
+                  ),
+                ),
               ],
             ),
           );
